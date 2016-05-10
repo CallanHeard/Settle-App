@@ -1,0 +1,647 @@
+/*
+ * Author: Callan Heard (c.j.heard@ncl.ac.uk)
+ * Project: NCL CSC3122: Mobile Computer Systems Development, Portfolio Part 2
+ * Purpose: settle app dashboard page styles
+ *
+ * base:	16px
+ * large:	48px (300%)
+ * small:	12px (75%)
+ * xsmall:	10px (62.5%)
+ *
+ * red:		#E50000
+ * green:	#66CD00
+ * grey:	#DDDDDD
+ * blue:	#3366BB
+ */
+
+/* Heading font */
+@font-face {
+	font-family:	Heading;
+	font-weight:	normal;
+	src:			url(../_fonts/roboto_regular.ttf);
+}
+
+/* Heading font (thin) */
+@font-face {
+	font-family:	Heading;
+	font-weight:	200;
+	src:			url(../_fonts/roboto_thin.ttf);
+}
+
+/* Body font */
+@font-face {
+	font-family:	Body;
+	src:			url(../_fonts/worksans_regular.otf);
+}
+
+/* Monospace font */
+@font-face {
+	font-family:	Mono;
+	src:			url(../_fonts/lekton_regular.ttf);	
+}
+
+/* Generic class for 'red' */
+.red {
+	color: #E50000; /* Red */
+}
+
+/* Generic class for 'green' */
+.green {
+	color: #66CD00; /* Green */
+}
+
+body {
+	font-family:	Body;
+	font-size:		16px; /* Base */
+}
+
+/* Page padding allowing for borders */
+body > * {
+	padding: 10px;
+}
+
+/* Login page logo */
+img.logo {
+	display:	block;
+	margin:		100px auto 25px;
+	padding:	0;
+	width:		150px;
+}
+
+/* Login page separator */
+hr.logo {
+	margin:				0;
+	border:				0;
+	padding:			0;
+	height:				1px;
+	background-image:	linear-gradient(to right, rgba(221, 221, 221, 0), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0));
+}
+
+/* Login form inputs */
+form.login input {
+	margin-bottom:	10px;
+	width:			100%;
+	font-size:		18px;
+}
+
+/* Form submit button fixed bottom position and gradient border */
+form.login div.wrapper {
+	margin:			0;
+	margin-top:		20px;
+	padding-top:	1px;
+	padding-bottom:	1px;
+	width:			100%;
+	background:		linear-gradient(to right, rgba(221, 221, 221, 0), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0));
+}
+
+form.login div.wrapper a {
+text-align:	center;
+	display:		block;
+	margin:			0;
+	padding:		10px;
+    font-size:		16px;
+    font-family:	Heading;
+	color:			#3366BB; /* Blue */
+	background:		#FFFFFF;
+	text-decoration:	none;
+}
+
+/* Form submit buttons */
+form.login input[type="submit"], form.newPayment input[type="submit"] {
+	margin:			0;
+	padding:		10px;
+    font-size:		16px;
+    font-family:	Heading;
+	color:			#3366BB; /* Blue */
+	background:		#FFFFFF;
+}
+
+/* Top bar */
+#topbar {
+	border-bottom: 1px solid #DDDDDD; /* Grey */
+}
+
+/* All top bar direct children */
+#topbar > * {
+	display: inline;
+}
+
+/* Top bar links */
+#topbar i {
+	padding:		10px; /* Make clickable size slightly larger */
+	opacity:		0.8;
+}
+
+/* Top bar link active state */
+#topbar i:active {
+	color: #3366BB; /* Blue */
+}
+
+/* Align closer to left side */
+#topbar i:first-of-type {
+	margin-left: -10px;
+}
+
+/* Page title */
+#topbar h1 {
+	float:			right;
+	font-size:		16px; /* Base */
+	font-family:	Heading;
+	font-weight:	200;
+}
+
+/* Black out background for sidebar */
+.overlay {
+	position:	absolute;
+	top:		0;
+	left:		0;
+	padding:	0;
+	height:		100%;
+	width:		100%;
+	background:	#000000;
+	opacity:	0.7;
+}
+
+/* Contents of sidebar */
+#sidebar ul {
+	margin-left:	-75%;	/* Start at left of screen */
+	position:		absolute;
+	top:			0;
+	left:			0;
+	width:			75%;
+	height:			100%;
+	background:		#FFFFFF;
+	font-family:	Body;
+}
+
+/* Separate account option */
+#sidebar ul li.split {
+	margin-top: 20px;
+}
+
+/* Menu option links */
+#sidebar ul li a {
+	display:			block;
+	padding:			5px 10px;
+	opacity:			0.8;
+	color:				#000000;
+	text-decoration:	none;
+}
+
+/* Selected menu option link */
+#sidebar ul li a.selected {
+	opacity:		0.9;
+	font-weight:	bold;
+}
+
+/* Menu option link click effect */
+#sidebar ul li a:active {
+	color: #3366BB; /* Blue */
+}
+
+/* Menu icons */
+#sidebar ul li a i {
+	float:		right;
+	width:		20px;	/* Centre align all icons */
+	text-align:	center;	/* Centre align all icons */
+}
+
+/* User profile in sidebar */
+.profile {
+	margin-bottom:		20px;
+	padding:			10px;
+	background:			url('../_img/congruent_pentagon/congruent_pentagon.png');
+	background-size:	100px;
+	font-size:			12px; /* small */
+}
+
+/* Profile image */
+.profile img {
+	margin-bottom:	10px;
+	height:			50px;
+	width:			50px;
+	border-radius:	100px;
+}
+
+/* User details */
+.profile p {
+	width:		100%;
+	word-wrap:	break-word; /* Wrap name/email address */
+}
+
+/* Bold name */
+.profile p:nth-child(3) {
+	font-weight: bold;
+}
+
+/* Score */
+.profile p:nth-child(5) {
+	margin-top:		10px;
+}
+
+/* Score value */
+.score {
+	font-size:	16px;
+	font-weight: bold;
+	font-family: Mono;
+}
+
+.score:after {
+	content: '%'; /* Percent sign after value */
+}
+
+/* Profile PIN number */
+.profile .pin {
+	float: right;
+	margin-top: 10px;
+	margin-right: 25px;
+	font-size: 40px;
+	font-family: Mono;
+	text-transform: uppercase;
+}
+
+/* Page overview */
+#overview {
+	margin-bottom:	5px;
+	border-bottom:	1px solid #DDDDDD; /* Grey */
+}
+
+/* Overview link */
+#overview a {
+	float:		left;
+	padding:	10px 20px 0; /* Spacing plus a nice clickable size for the button */
+	opacity:	0.8;
+	font-size:	48px;
+	color:		#000000;
+}
+
+/* Overview link active state */
+#overview a:active {
+	color: #3366BB; /* Blue */
+}
+
+/* All total value headings together */
+#overview #totals {
+	float: right;
+}
+
+/* Each total value heading */
+#overview #totals div {
+	display: none; /* Only show selected */
+}
+
+/* Selected total value heading */
+#overview #totals div.selected {
+	display:	block;
+	min-width:	100px; /* At least some reasonable clickable area */
+}
+
+/* Total changing headings */
+#overview h2 {
+	text-align:		right;
+	font-size:		12px;	/* Small */
+	text-transform:	uppercase;
+	font-family:	Heading;
+}
+
+/* Total value displayed */
+#overview h3 {
+	text-align:		right;
+	font-size:		48px;	/* Large */
+	font-family:	Heading;
+	font-weight:	200;
+}
+
+/* Selected total value */
+#overview h3.selected {
+	display: block;
+}
+
+#overview h3:before {
+	content: '\00a3'; /* Pound sign before value */
+}
+
+/* Payment list */
+.payment_list {
+	display:		none; /* Hide unless there are payments */
+	font-family:	Body; /* Base */
+}
+
+/* Payment list headings */
+.payment_list h4 {
+	margin-bottom:	5px;
+	font-size:		16px; /* Base */
+	font-family:	Heading;
+	font-weight:	200;
+}
+
+/* Separator for each payment in a list */
+.payment_list hr {
+	margin-top:			0;
+	margin-bottom:		0;
+	margin-right:		-10px;
+	border:				0;
+	height:				1px;
+	background-image:	linear-gradient(to right, rgba(221, 221, 221, 0), rgba(221, 221, 221, 1));
+}
+
+/* Individual payment */
+.payment {
+	margin-left: 5px;
+}
+
+/* Float image and details next to each other */
+.payment a > * {
+	float: left;
+}
+
+/* Payment host profile image */
+.payment img {
+	margin:			5px;
+	border-radius:	100px;
+	height:			40px;
+	width:			40px;
+}
+
+/* Payment details */
+.payment .details {
+	margin-top:		20px;
+	margin-left:	5px;
+	padding-bottom:	10px;
+	width:			60%;
+}
+
+/* Payment details ellipsis overflow effect */
+.payment .details p {
+	white-space:	nowrap;
+	overflow:		hidden;
+	text-overflow:	ellipsis;
+	color:			#000000;
+}
+
+/* Payment link click effect */
+.payment a:active .details p {
+	color: #3366BB; /* Blue */
+}
+
+/* Slightly vary detail font styles/sizes */
+.payment .details p:nth-child(1) {
+	font-size:		12px; /* small */
+	font-weight:	bold;
+	text-transform:	uppercase;
+}
+
+/* Slightly vary detail font styles/sizes */
+.payment .details p:nth-child(2) {
+	font-size: 10px; /* xsmall */
+}
+
+/* Payment amount */
+.payment .amount {
+	float:			right;
+	margin-top:		20px;
+	text-align:		right;
+	font-family:	Mono;
+}
+
+.payment .amount:before {
+	content: '\00a3'; /* Pound sign before value */
+}
+
+/* View full payment details */
+#details {
+	border-bottom:	1px solid #DDDDDD; /* Grey */
+	padding-top:	5px;
+	padding-bottom:	5px;
+}
+
+/* Payment description */
+#details > p {
+	margin-left:	10px;
+	padding:		10px;
+	opacity:		0.8;
+	font-size:		12px; /* Small */
+}
+
+/* Quotation marks for payment description */
+#details > p:before, #details > p:after {
+	content: '"';
+}
+
+/* Individual user */
+.user {
+	margin-left: 5px;
+}
+
+/* Float user profile image and details next to each other */
+.user > * {
+	float: left;
+}
+
+/* User profile image */
+.user img {
+	margin:			5px;
+	border-radius:	100px;
+	height:			40px;
+	width:			40px;
+}
+
+/* User details */
+.user .details {
+	margin-top:		20px;
+	margin-left:	5px;
+	padding-bottom:	10px;
+	width:			60%;
+	color:			#000000;
+}
+
+/* User details ellipsis overflow effect */
+.user .details p {
+	white-space:	nowrap;
+	overflow:		hidden;
+	text-overflow:	ellipsis;
+}
+
+/* Slightly vary detail font styles/sizes */
+.user .details p:nth-child(1) {
+	font-size:		12px; /* small */
+	font-weight:	bold;
+}
+
+/* Slightly vary detail font styles/sizes */
+.user .details p:nth-child(2) {
+	font-size: 10px; /* xsmall */
+}
+
+/* Contributor user amount */
+.user .amount {
+	float:			right;
+	margin-top:		20px;
+	text-align:		right;
+	font-family:	Mono;
+}
+
+.user .amount:before {
+	content: '\00a3'; /* Pound sign before value */
+}
+
+/* New user score */
+.user .score {
+	float:			right;
+	margin-top:		20px;
+	margin-right:	20px;
+}
+
+/* Separator for each user in a list */
+#members li hr {
+	margin-top:			0;
+	margin-bottom:		0;
+	margin-right:		-10px;
+	border:				0;
+	height:				1px;
+	background-image:	linear-gradient(to right, rgba(221, 221, 221, 0), rgba(221, 221, 221, 1));
+}
+
+/* Create payment form */
+form.newPayment {
+	padding-top: 20px; /* Nice bit of spacing from the top of the page */
+}
+
+/* Direct input children of the form */
+form.newPayment > input, form > fieldset {
+	margin-bottom:	20px;
+	padding-top:	5px;
+}
+
+/* All form inputs */
+form.newPayment input {
+	width: 100%;
+	color: #3366BB;
+}
+
+/* Input placeholder colour */
+form.newPayment input::-webkit-input-placeholder {
+	color: #BBBBBB;
+}
+
+form.newPayment label span, form.newPayment legend span {
+	color: #666666;
+}
+
+/* Payment amount labels */
+form.newPayment label[for="pounds"], form.newPayment label[for="pennies"] {
+	font-family: Mono;
+}
+
+/* Payment amount inputs */
+form.newPayment input[name="pounds"], form.newPayment input[name="pennies"] {
+	width:			50px;
+	font-family:	Mono;
+}
+
+/* Payment amount pounds right-align */
+form.newPayment input[name="pounds"] {
+	text-align: right;
+}
+
+/* Labels for groups of inputs */
+form.newPayment fieldset legend {
+	float: left;
+	width: 100%;
+}
+
+/* Add member button */
+form.newPayment fieldset legend i {
+	float:		right;
+	margin-top:	-10px;
+	padding:	10px;
+}
+
+/* Add member button active state */
+form.newPayment fieldset legend i:active {
+	color: #3366BB /* Blue */
+}
+
+/* HRs in form */
+form.newPayment hr {
+	margin:				0 -10px 20px;
+	border:				0;
+	padding:			0;
+	height:				1px;
+	background-image:	linear-gradient(to right, rgba(221, 221, 221, 0), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0));
+}
+
+/* List of members being added to the payment */
+form.newPayment #members {
+	margin-bottom:	20px;
+	height:			175px;
+	width:			100%;
+	color:			#BBBBBB;
+	overflow-y:		scroll;
+}
+
+/* New member PIN input */
+form.newPayment #newMember {
+	margin-bottom: 10px;
+}
+
+form.newPayment #members .user p {
+	color: #3366BB; /* Blue */
+}
+
+/* New payment form submit button fixed position at bottom of window */
+form.newPayment div.wrapper {
+	position:		fixed;
+	bottom:			0;
+	margin:			0;
+	margin-left:	-10px;
+	padding-top:	1px;
+	width:			100%;
+	background:		linear-gradient(to right, rgba(221, 221, 221, 0), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0));
+}
+
+/* Heading for notifications page */
+#notificationsOverview {
+	padding-top:	20px;
+	text-align:		center;
+}
+
+/* HR in heading for notifications page */
+#notificationsOverview hr {
+	margin:				20px -10px 10px;
+	border:				0;
+	height:				1px;
+	background-image:	linear-gradient(to right, rgba(221, 221, 221, 0), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0));
+}
+
+/* Notification profile image */
+.notification img {
+	float:			left;
+	margin:			5px;
+	margin-right:	10px;
+	border-radius:	100px;
+	height:			50px;
+	width:			50px;
+}
+
+/* Notification details */
+.notification p {
+	margin-bottom:	1px;
+	padding-top:	10px;
+	color:			#3366BB;
+}
+
+/* Notification details sender/payment name */
+.notification p span {
+	font-weight: bold;
+}
+
+/* HR in notification list */
+#notifications hr {
+	margin-top:			15px;
+	margin-bottom:		0;
+	margin-right:		-10px;
+	border:				0;
+	height:				1px;
+	background-image:	linear-gradient(to right, rgba(221, 221, 221, 0), rgba(221, 221, 221, 1));
+}

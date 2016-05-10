@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+
+		<!-- Page info -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Callan Heard (c.j.heard@ncl.ac.uk)" />
+		<meta name="description" content="NCL CSC3122: Mobile Computer Systems Development, Portfolio Part 2 - settle app dashboard page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Dashboard | Settle</title>
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="_css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="_css/main.css" />
+		
+		<!-- Scripts -->
+		<script type="text/javascript" src="_js/system.js"></script>
+		<script type="text/javascript" src="_js/classes.js"></script>
+
+	</head>
+	<body onload="load('Dashboard', 'dashboard'); dashboard();">
+		
+		<!-- Main dashboard overview -->
+		<div id="overview" class="clear">
+		
+			<a href="create_payment.html"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a> <!-- Create new payment -->
+			
+			<!-- Overview headings -->
+			<div id="totals">
+			
+				<!-- Total balance -->
+				<div id="balance_heading" onclick="toggleHeading(this);">
+				
+					<h2>Balance</h2>
+					<h3 id="balance_total"></h3>
+					
+				</div>
+				
+				<!-- Total outgoings -->
+				<div id="owes_heading" onclick="toggleHeading(this);">
+				
+					<h2>Total You Owe</h2>
+					<h3 id="owes_total"></h3>
+					
+				</div>
+				
+				<!-- Total incomings -->
+				<div id="owed_heading" onclick="toggleHeading(this);">
+				
+					<h2>Total You're Owed</h2>
+					<h3 id="owed_total"></h3>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- Outgoing payments -->
+		<div id="owes" class="payment_list">
+			
+			<h4>You Owe</h4> <!-- Payment list heading -->
+			
+			<!-- List of payments -->
+			<ul></ul>
+			
+		</div>
+		
+		<!-- Incoming payments -->
+		<div id="owed" class="payment_list">
+			
+			<h4>You're Owed</h4> <!-- Payment list heading -->
+			
+			<!-- List of payments -->
+			<ul></ul>
+			
+		</div>
+
+	</body>
+</html>

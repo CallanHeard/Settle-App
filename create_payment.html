@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+
+		<!-- Page info -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Callan Heard (c.j.heard@ncl.ac.uk)" />
+		<meta name="description" content="NCL CSC3122: Mobile Computer Systems Development, Portfolio Part 2 - settle app create payment page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>New Payment | Settle</title> <!-- Dynamic page title -->
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="_css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="_css/main.css" />
+		
+		<!-- Scripts -->
+		<script type="text/javascript" src="_js/system.js"></script>
+		<script type="text/javascript" src="_js/classes.js"></script>
+
+	</head>
+	<body onload="load('New Payment', 'payment');">
+	
+		<!-- Form for creating a new payment -->
+		<form class="newPayment" autocomplete="off" onsubmit="return validate(this);">
+			
+			<label>Name</label>
+			<input name="name" type="text" placeholder="&#34Cinema tickets&#34" maxlength="25" required="required" /> <!-- Payment name -->
+			
+			<label>Description <span>(Optional)</span></label>
+			<input name="description" type="text" placeholder="&#34From BvS last week&#34" maxlength="100" /><!-- Payment description -->
+			
+			<!-- Payment amount fieldset -->
+			<fieldset>
+			
+				<legend>Amount <span>(Paid by you)</span></legend>
+				
+				<label for="pounds">&#163 </label>
+				<input name="pounds" type="text" placeholder="0" maxlength="5" pattern="[0-9]*" required="required" /> <!-- Payment amount (pounds) -->
+				<label for="pennies">.</label>
+				<input name="pennies" type="text" placeholder="0" maxlength="2" pattern="[0-9]*" /> <!-- Payment amount (pennies) -->
+				
+			</fieldset>
+			
+			<!-- TODO (adds a lot of extra work)
+			Type
+			<select>
+				<option>Split</option>
+				<option>Percentage</option>
+				<option>Exact</option>
+			</select>
+			-->
+			
+			<hr />
+			
+			<!-- Payment members fieldset -->
+			<fieldset>
+			
+				<legend class="clear">Members <span>(Split evenly between)</span><i onclick="newMember(this);" class="fa fa-plus" aria-hidden="true"></i></legend> <!-- Header and new member PIN input toggle -->				
+				<input style="display: none;" id="newMember" type="text" placeholder="Enter User PIN: &#34ABC12&#34" maxlength="5" onkeyup="addMember(this)" /> <!-- New member PIN input -->
+				
+				<div id="members">- Use the plus icon to add people</div> <!-- List of members in the payment -->
+				
+			</fieldset>
+			
+			<!-- Submit button -->
+			<div class="wrapper">
+				<input type="submit" value="Create" name="createPayment" />
+			</div>
+			
+		</form>
+
+	</body>
+</html>

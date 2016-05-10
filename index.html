@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+
+		<!-- Page info -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Callan Heard (c.j.heard@ncl.ac.uk)" />
+		<meta name="description" content="NCL CSC3122: Mobile Computer Systems Development, Portfolio Part 2 - settle app log-in page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Login | Settle</title>
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="_css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="_css/main.css" />
+		
+		<!-- Scripts -->
+		<script type="text/javascript" src="_js/login.js"></script>
+
+	</head>
+	<body>
+		
+		<!-- App Logo -->		
+		<img class="logo" src="_img/logo.png" alt="Settle App Logo" />
+		
+		<hr class="logo" />
+		
+		<!-- Login Details -->
+		<form class="login" onsubmit="return login();">
+
+			<input name="email" type="email" autocomplete="off" placeholder="Email" required="required" />
+			<input name="password" type="password" placeholder="Password" required="required" />
+		
+			<!-- Submit button -->
+			<div class="wrapper">
+				<!--<input type="submit" value="Log In" name="login" />-->
+				<a href="dashboard.html?id=9">Log In</a>
+			</div>
+		
+		</form>
+		
+	</body>
+</html>
